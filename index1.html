@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />     
+    <title>JustSIng</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">ARTIST</a></li>
+        <li><a href="#">GENRE</a></li>
+        <li><a href="#">PLAYLIST</a></li>
+        <li><a href="#">FAVOURITE</a></li>
+    </ul>
+</div>
+
+<div class="container">
+
+  <div class="slide">
+
+    <div class="item" style="background-image: url(bgpic.jpg);">
+      <div class="content">
+        <div class="name">MUSIC</div>
+        <div class="des"><br><strong>WE</strong> MAKE OUR OWN MUSIC<br></div>
+        <button>See More</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(ima.jpg);">
+      <div class="content">
+        <div class="name">PLAYLIST</div>
+        <div class="des"><br><strong>SAVE</strong> YOUR SONG AND LISTEN TO THEM EVERYDAY</br></div>
+        <button>See More</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(ina.jpg);">
+      <div class="content">
+        <div class="name">ARTIST</div>
+        <div class="des"><br><strong>YOU</strong> CAN HEAR ALL YOUR FAVORITE SONG WRITERS HERE</br></div>
+        <div class="right-col">
+          <p><br>Click To Play <STRONG>BY INA WROLDSEN</STRONG></br></p>
+          <img src="play.png" id="icon">
+      </div>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(in.avif);">
+      <div class="content">
+        <div class="name">LYRICS</div>
+        <div class="des"><br><strong>CREATE</strong> YOUR OWN LYRICS AND MAKE A SONG HERE<br></div>
+        <button>See More</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(instu.jpg);">
+      <div class="content">
+        <div class="name">INSTRUMENT</div>
+        <div class="des"><br><strong>NEW</strong> SONG TO LISTEN WITH THE NEW INSTRUMENT YOU LOVE</br></div>
+        <button>See More</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(note1.jpg);">
+      <div class="content">
+        <div class="name">NOTE</div>
+        <div class="des"><br><strong>WORLD</strong> FELD WITH SONG NOTE YOU CAN CREATE </br></div>
+        <button>See More</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="button">
+    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</div>
+</div>
+</div>
+
+<audio id="song">
+<source src="I Wanted You - Ina (Lyrics) (1).mp3" type="audio/mp3">
+</audio>
+
+<script>
+var song = document.getElementById("song");
+var icon = document.getElementById("icon");
+
+icon.onclick = function(){
+            if(song.paused){
+                song.play();
+                icon.src = "pause.png";
+        }
+            else{
+                song.pause();
+                icon.src = "play.png";
+            }
+        }
+</script>
+</body>
+</html>
